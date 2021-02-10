@@ -10,7 +10,6 @@
   }
   
   &::before {
-    content: 'hello';
     width: 10rem;
   }
 
