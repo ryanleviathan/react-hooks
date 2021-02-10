@@ -9,3 +9,15 @@ export const findQuotes = () => {
       }))
     );
 };
+
+export const findQuotesByCharacter = (character) => {
+  return fetch(`http://futuramaapi.herokuapp.com/api/characters/${character}`)
+    .then((res) => res.json())
+    .then((quotes) =>
+      quotes.map(({ character, image, quote }) => ({
+        character,
+        image,
+        text: quote
+      }))
+    );
+};
