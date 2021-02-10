@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './Quote.css';
 
 const Quote = ({ image, character, text }) => (
   <figure className={styles.Quote}>
-    <img src={image} alt={character} />
+    <Link to={`${character}`}>
+      <img src={image} alt={character} />
+    </Link>
     <figcaption>
       <p>{character}</p>
       <p>{text}</p>
