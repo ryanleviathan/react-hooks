@@ -1,10 +1,15 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import ByCharacterQuotes from './ByCharacterQuotes';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('ByCharacterQuotes container', () => {
   it('displays quotes by a character', async() => {
-    render(<ByCharacterQuotes match={{ params: { character: 'Bender' } }} />);
+    render(
+      <MemoryRouter>
+        <ByCharacterQuotes match={{ params: { character: 'Bender' } }} />
+      </MemoryRouter>
+    );
 
     screen.getByAltText('Loading');
 

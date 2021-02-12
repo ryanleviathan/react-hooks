@@ -15,7 +15,7 @@ const Quote = ({ image, character, text }) => (
   </figure>
 );
 
-Quote.PropTypes = {
+Quote.propTypes = {
   image: PropTypes.string.isRequired,
   character: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired

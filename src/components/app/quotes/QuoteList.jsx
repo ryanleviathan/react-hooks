@@ -16,7 +16,7 @@ const QuoteList = ({ quotes }) => {
   return <ul data-testid="quotes">{quoteElements}</ul>;
 };
 
-QuoteList.PropTypes = {
+QuoteList.propTypes = {
   quotes: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string.isRequired,
