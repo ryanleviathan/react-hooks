@@ -6,10 +6,10 @@ import { findQuotesByCharacter } from '../services/futuramaApi';
 const ByCharacterQuotes = () => {
   const [loading, setLoading] = useState(true);
   const [quotes, setQuotes] = useState([]);
-
-  const { name } = useParams();
+  
+  const { character } = useParams();
   useEffect(() => {
-    findQuotesByCharacter(name)
+    findQuotesByCharacter(character)
       .then((quotes) => {
         setQuotes(quotes);
         setLoading(false);
