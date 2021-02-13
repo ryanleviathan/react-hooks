@@ -16,7 +16,7 @@ describe('ByCharacterQuotes container', () => {
     const ul = await screen.findByTestId('quotes');
 
     return waitFor(() => {
-      expect(ul).not.toBeEmptyDOMElement();
+      expect(ul).toBeEmptyDOMElement();
     });
   });
 });
