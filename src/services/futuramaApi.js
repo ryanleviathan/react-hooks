@@ -1,5 +1,5 @@
 export const findQuotes = () => {
-  return fetch('http://futuramaapi.herokuapp.com/api/quotes')
+  return fetch('https://futuramaapi.herokuapp.com/api/quotes')
     .then((res) => res.json())
     .then((quotes) =>
       quotes.map(({ character, image, quote }) => ({
@@ -11,7 +11,7 @@ export const findQuotes = () => {
 };
 
 export const findQuotesByCharacter = (character) => {
-  return fetch(`http://futuramaapi.herokuapp.com/api/characters/${character}`)
+  return fetch(`https://futuramaapi.herokuapp.com/api/characters/${character}`)
     .then((res) => res.json())
     .then((quotes) =>
       quotes.map(({ character, image, quote }) => ({
