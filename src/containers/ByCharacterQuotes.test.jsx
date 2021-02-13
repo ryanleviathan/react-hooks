@@ -11,12 +11,12 @@ describe('ByCharacterQuotes container', () => {
       </MemoryRouter>
     );
 
-    screen.getByAltText('Loading');
+    screen.getByText('Loading');
 
     const ul = await screen.findByTestId('quotes');
 
     return waitFor(() => {
-      expect(ul).not.toBeEmptyDOMElement();
+      expect(ul).toBeEmptyDOMElement();
     });
   });
 });
