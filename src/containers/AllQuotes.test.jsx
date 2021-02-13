@@ -4,14 +4,14 @@ import AllQuotes from './AllQuotes';
 import { MemoryRouter } from 'react-router-dom';
 
 describe('AllQuotes container', () => {
-  it('displays a loading screen then a list of quotes', async () => {
+  it('displays a loading screen then a list of quotes', async() => {
     render(
       <MemoryRouter>
         <AllQuotes />
       </MemoryRouter>
     );
 
-    screen.getByAltText('Loading');
+    screen.getByText('Loading');
 
     const ul = await screen.findByTestId('quotes');
 
